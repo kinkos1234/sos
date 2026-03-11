@@ -1,0 +1,194 @@
+{
+  "foundations": {
+    "title": "Tier -1 순수기초 퀴즈",
+    "questions": [
+      {
+        "type": "multiple",
+        "question": "벡터 임베딩에서 두 벡터의 의미적 유사도를 측정하는 가장 일반적인 방법은?",
+        "options": ["유클리드 거리", "코사인 유사도", "맨해튼 거리", "해밍 거리"],
+        "answer": 1,
+        "explanation": "코사인 유사도는 방향 기반으로 고차원 임베딩 공간에서 의미적 유사도를 측정하는 표준 방법입니다."
+      },
+      {
+        "type": "truefalse",
+        "question": "Transformer 아키텍처의 핵심 혁신은 CNN을 대체한 것이다.",
+        "answer": false,
+        "explanation": "Transformer의 핵심은 Self-Attention 메커니즘으로, RNN의 순차 처리 한계를 극복한 것입니다."
+      },
+      {
+        "type": "multiple",
+        "question": "Polyglot Persistence란?",
+        "options": ["하나의 DB로 모든 것을 처리", "다국어 지원 데이터베이스", "용도에 따라 다른 DB를 조합", "분산 데이터베이스 클러스터"],
+        "answer": 2,
+        "explanation": "관계형(RDBMS), 그래프(Neo4j), 벡터(ChromaDB) 등 용도에 맞는 DB를 조합하는 전략입니다."
+      },
+      {
+        "type": "multiple",
+        "question": "그래프에서 BFS(너비 우선 탐색)의 핵심 특성은?",
+        "options": ["최단 경로를 보장한다", "메모리 효율이 가장 높다", "재귀적으로만 구현 가능하다", "가중치 그래프에서만 동작한다"],
+        "answer": 0,
+        "explanation": "BFS는 비가중치 그래프에서 최단 경로를 보장합니다. GraphRAG의 hop 기반 탐색의 기초입니다."
+      },
+      {
+        "type": "truefalse",
+        "question": "TF-IDF는 단어의 문서 내 빈도와 전체 코퍼스에서의 희소성을 결합한 가중치다.",
+        "answer": true,
+        "explanation": "TF(문서 내 빈도) × IDF(역문서 빈도)로, 특정 문서에서 중요한 단어를 식별합니다."
+      }
+    ]
+  },
+  "applied": {
+    "title": "Tier 0 응용기초 퀴즈",
+    "questions": [
+      {
+        "type": "multiple",
+        "question": "Naive RAG의 가장 큰 구조적 한계는?",
+        "options": ["속도가 느리다", "멀티홉 추론이 불가능하다", "영어만 지원한다", "벡터 DB가 필요하다"],
+        "answer": 1,
+        "explanation": "인과 관계가 여러 청크에 분산되어 있을 때, 벡터 유사도만으로는 멀티홉 추론이 불가능합니다."
+      },
+      {
+        "type": "truefalse",
+        "question": "지식 그래프의 기본 단위는 (주어, 술어, 목적어) 트리플이다.",
+        "answer": true,
+        "explanation": "RDF 트리플이 지식 그래프의 기본 구성 단위입니다. 예: (팀쿡, CEO_OF, 애플)"
+      },
+      {
+        "type": "multiple",
+        "question": "ReAct 패턴의 사이클 순서는?",
+        "options": ["Action → Thought → Observation", "Thought → Action → Observation", "Observation → Action → Thought", "Thought → Observation → Action"],
+        "answer": 1,
+        "explanation": "ReAct = Reasoning + Acting. 생각(Thought) → 행동(Action) → 관찰(Observation) 순서입니다."
+      },
+      {
+        "type": "multiple",
+        "question": "Persistent Homology(지속적 호몰로지)가 분석하는 것은?",
+        "options": ["데이터의 확률 분포", "데이터의 위상학적 특징(구멍, 연결 성분 등)", "데이터의 선형 관계", "데이터의 시계열 패턴"],
+        "answer": 1,
+        "explanation": "TDA의 핵심 도구로, 다양한 스케일에서 데이터의 위상학적 특징을 추적합니다."
+      },
+      {
+        "type": "truefalse",
+        "question": "MCP(Model Context Protocol)의 3가지 구성요소는 Resources, Tools, Prompts이다.",
+        "answer": true,
+        "explanation": "MCP는 AI 에이전트가 외부 도구와 통신하는 표준 프로토콜로, 이 세 가지로 구성됩니다."
+      }
+    ]
+  },
+  "core": {
+    "title": "Tier 1 핵심 퀴즈",
+    "questions": [
+      {
+        "type": "multiple",
+        "question": "GraphRAG에서 커뮤니티 탐지에 사용하는 알고리즘은?",
+        "options": ["PageRank", "Leiden", "K-Means", "DBSCAN"],
+        "answer": 1,
+        "explanation": "Leiden 알고리즘으로 C0(루트)~C3(리프) 4계층의 커뮤니티를 탐지합니다."
+      },
+      {
+        "type": "multiple",
+        "question": "메타엣지(Meta-Edge)의 정의로 가장 적합한 것은?",
+        "options": ["가장 중요한 엣지", "관계에 대한 관계, 판단 기준을 정의하는 연결", "두 그래프를 연결하는 엣지", "가중치가 높은 엣지"],
+        "answer": 1,
+        "explanation": "메타엣지는 엣지에 대한 엣지, 엣지를 정의하는 규칙, 엣지들 사이의 관계입니다."
+      },
+      {
+        "type": "truefalse",
+        "question": "팔란티어 온톨로지의 Action Type은 전통 온톨로지에 없던 혁신이다.",
+        "answer": true,
+        "explanation": "전통 온톨로지는 정적 구조만 정의하지만, 팔란티어는 Action Type으로 동적 운영을 온톨로지에 내장합니다."
+      },
+      {
+        "type": "multiple",
+        "question": "위상학적 지능이 확률적 지능과 가장 다른 점은?",
+        "options": ["더 빠르다", "더 저렴하다", "관계를 엣지로 명시적으로 저장한다", "GPU가 필요 없다"],
+        "answer": 2,
+        "explanation": "확률적 지능은 벡터 공간에서 관계를 유추하지만, 위상학적 지능은 그래프 엣지로 명시적 저장합니다."
+      },
+      {
+        "type": "multiple",
+        "question": "GraphRAG의 글로벌 검색 방식은?",
+        "options": ["벡터 유사도 검색", "키워드 매칭", "커뮤니티 요약 병렬 맵-리듀스", "SQL JOIN"],
+        "answer": 2,
+        "explanation": "글로벌 검색은 사전 생성된 커뮤니티 요약들을 병렬로 질의하고 맵-리듀스로 통합합니다."
+      }
+    ]
+  },
+  "framework": {
+    "title": "Tier 2 프레임워크 퀴즈",
+    "questions": [
+      {
+        "type": "multiple",
+        "question": "6개 분석공간 중 나머지 5개를 동시에 고려할 때 나타나는 창발적 차원은?",
+        "options": ["계층공간", "재귀공간", "인과공간", "다중공간(Cross-space)"],
+        "answer": 3,
+        "explanation": "다중공간은 나머지 5개 공간의 교차점에서 나타나는 창발적 차원입니다."
+      },
+      {
+        "type": "truefalse",
+        "question": "ReBAC에서 접근 허용은 Subject와 Object 사이에 유효한 관계 경로가 존재하면 된다.",
+        "answer": true,
+        "explanation": "접근 허용 = Subject에서 Object까지 유효한 관계 경로 존재. Google Zanzibar의 핵심 원리입니다."
+      },
+      {
+        "type": "multiple",
+        "question": "메타온톨로지의 3계층 추상화에서 최상위 계층은?",
+        "options": ["도메인 온톨로지", "메타온톨로지", "Universal Principals", "비즈니스 룰"],
+        "answer": 2,
+        "explanation": "도메인 온톨로지 → 메타온톨로지 → Universal Principals 순서로 추상화됩니다."
+      },
+      {
+        "type": "multiple",
+        "question": "온톨로지 = 검색 구조 = 접근제어 구조 가 의미하는 것은?",
+        "options": ["세 가지 시스템을 따로 만들어야 한다", "하나의 온톨로지가 세 역할을 동시에 수행한다", "검색과 접근제어는 별개 문제다", "온톨로지는 검색에만 사용된다"],
+        "answer": 1,
+        "explanation": "핵심 통찰: 하나의 온톨로지로 지식 구조화, 검색, 접근제어를 동시에 해결합니다."
+      },
+      {
+        "type": "multiple",
+        "question": "벡터 의미 풍부화의 3단계 순서는?",
+        "options": ["의미 다층화 → 유사단어 확장 → 온톨로지 정렬", "유사단어 확장 → 의미 다층화 → 온톨로지 정렬", "온톨로지 정렬 → 유사단어 확장 → 의미 다층화", "유사단어 확장 → 온톨로지 정렬 → 의미 다층화"],
+        "answer": 1,
+        "explanation": "1) 유사단어 목록 생성 → 2) 의미 다층화 → 3) 도메인 온톨로지 정렬입니다."
+      }
+    ]
+  },
+  "implementation": {
+    "title": "Tier 3 구현 퀴즈",
+    "questions": [
+      {
+        "type": "multiple",
+        "question": "NOMIK이 기존 RAG dump와 다른 핵심 차이는?",
+        "options": ["더 많은 파일을 전달한다", "47개 파일 대신 6개의 정확한 관계 노드만 전달한다", "코드를 직접 실행한다", "GPU를 사용한다"],
+        "answer": 1,
+        "explanation": "NOMIK은 코드베이스를 지식 그래프로 구조화하여, AI에게 정확한 관계 정보만 전달합니다."
+      },
+      {
+        "type": "truefalse",
+        "question": "FDE의 진짜 가치는 코드 작성이 아니라 메타온톨로지 축적이다.",
+        "answer": true,
+        "explanation": "100개 고객사의 도메인 온톨로지에서 공통 패턴을 추출하여 101번째 고객에 즉시 적용합니다."
+      },
+      {
+        "type": "multiple",
+        "question": "Apollo의 아키텍처는?",
+        "options": ["Client-Server", "Hub-Spoke", "Peer-to-Peer", "Microservices"],
+        "answer": 1,
+        "explanation": "Apollo는 Hub(오케스트레이터) + Spoke(실행 환경) 구조입니다."
+      },
+      {
+        "type": "multiple",
+        "question": "레버의 5가지 핵심 속성이 아닌 것은?",
+        "options": ["합성성(Composability)", "관찰 가능성(Observability)", "확장성(Scalability)", "멱등성(Idempotency)"],
+        "answer": 2,
+        "explanation": "5가지: 합성성, 관찰 가능성, 멱등성, 실패 복원력, 버전 관리입니다."
+      },
+      {
+        "type": "truefalse",
+        "question": "Active Metadata란 메타데이터가 변경되면 파이프라인과 UI가 자동으로 반응하는 구조다.",
+        "answer": true,
+        "explanation": "스키마 변경 → 파이프라인 갱신 → UI 자동 업데이트의 구조입니다."
+      }
+    ]
+  }
+}

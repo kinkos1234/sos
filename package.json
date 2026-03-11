@@ -1,0 +1,23 @@
+{
+  "name": "sos",
+  "version": "1.0.0",
+  "description": "온톨로지 네이티브 시스템 종합 가이드 — 교육 사이트",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vitepress dev site",
+    "build": "vitepress build site",
+    "preview": "vitepress preview site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "d3": "^7.9.0",
+    "mermaid": "^11.13.0",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vue": "^3.5.30"
+  }
+}
