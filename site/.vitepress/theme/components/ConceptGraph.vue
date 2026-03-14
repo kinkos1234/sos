@@ -193,7 +193,8 @@ async function renderGraph() {
     await router.go(withBase(d.link))
     if (hash) {
       setTimeout(() => {
-        const el = document.getElementById(hash)
+        const nfd = hash.normalize('NFD')
+        const el = document.getElementById(hash) || document.getElementById(nfd)
         if (el) el.scrollIntoView({ behavior: 'smooth' })
       }, 500)
     }
