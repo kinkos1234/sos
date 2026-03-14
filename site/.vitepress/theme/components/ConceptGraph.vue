@@ -187,18 +187,8 @@ async function renderGraph() {
     node.attr('opacity', 1)
     link.attr('stroke-opacity', 0.6).attr('stroke', '#2e2e2e')
   })
-  .on('click', async (event, d) => {
-    if (!d.link) return
-    const url = withBase(d.link)
-    const hash = d.link.split('#')[1]
-    await router.go(url)
-    if (hash) {
-      await nextTick()
-      requestAnimationFrame(() => {
-        const el = document.getElementById(decodeURIComponent(hash))
-        if (el) el.scrollIntoView({ behavior: 'smooth' })
-      })
-    }
+  .on('click', (event, d) => {
+    if (d.link) window.location.href = withBase(d.link)
   })
 
   // Tick
