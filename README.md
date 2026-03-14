@@ -25,11 +25,11 @@ npm run dev
 - **5-Tier 체계적 학습** — 순수기초 → 응용기초 → 핵심 → 프레임워크 → 구현
 - **인터랙티브 개념 관계도** — D3.js 기반 35개 개념 네트워크 그래프
 - **역할별 학습 경로** — AI 엔지니어 / 데이터 사이언티스트 / 백엔드 / 기획 / 입문자
-- **Mermaid 다이어그램** — GraphRAG 파이프라인, 레버 구조, ReBAC 관계 등
+- **Mermaid 다이어그램** — 가독성과 렌더링이 최적화된 프리미엄 스타일 (GraphRAG 파이프라인, 레버 구조, ReBAC 관계 등)
 - **이해도 퀴즈** — 각 Tier별 5문항
 - **진도 추적** — localStorage 기반 체크리스트
 - **풀텍스트 검색** — 전체 콘텐츠 한글 검색
-- **다크 모드** — Threads 스타일 미니멀 다크 테마 (기본)
+- **UI/UX** — Threads 스타일의 미니멀 다크/라이트 테마
 
 ## 프로젝트 구조
 
@@ -59,10 +59,10 @@ sos/
 
 ## 스크립트
 
-| 명령어 | 설명 |
-|--------|------|
-| `npm run dev` | 개발 서버 (HMR) |
-| `npm run build` | 정적 빌드 |
+| 명령어            | 설명               |
+| ----------------- | ------------------ |
+| `npm run dev`     | 개발 서버 (HMR)    |
+| `npm run build`   | 정적 빌드          |
 | `npm run preview` | 빌드 결과 미리보기 |
 
 ## 배포
@@ -70,6 +70,7 @@ sos/
 GitHub에 push하면 GitHub Actions가 자동으로 GitHub Pages에 배포합니다.
 
 수동 배포:
+
 ```bash
 npm run build
 # site/.vitepress/dist/ 디렉토리를 원하는 서버에 배포
@@ -83,11 +84,11 @@ npm run build
 
 ## 크레딧
 
-| 역할 | 링크 |
-|------|------|
-| **교육 사이트 기획·콘텐츠 구성** | [@comad.j](https://www.threads.com/@comad.j) |
-| **세미나 원본 자료** | [@heretics_gene](https://www.threads.com/@heretics_gene) |
-| **PDF 편집·지식베이스 구축** | [@specal1849](https://www.threads.com/@specal1849) |
+| 역할                             | 링크                                                     |
+| -------------------------------- | -------------------------------------------------------- |
+| **교육 사이트 기획·콘텐츠 구성** | [@comad.j](https://www.threads.com/@comad.j)             |
+| **세미나 원본 자료**             | [@heretics_gene](https://www.threads.com/@heretics_gene) |
+| **PDF 편집·지식베이스 구축**     | [@specal1849](https://www.threads.com/@specal1849)       |
 
 ## 원본 자료
 
