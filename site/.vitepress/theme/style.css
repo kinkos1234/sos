@@ -75,61 +75,149 @@ body {
   padding-bottom: 4rem;
 }
 
+/* ============================================
+   Text Hierarchy System
+   h1: Tier title (page-level)
+   h2: Concept heading (C01, P01, F01...)
+   h3: Sub-section within concept
+   h4: Sub-sub heading
+   ============================================ */
+
+/* --- h1: Tier Title --- */
 .vp-doc h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.3;
-  margin-top: 2rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--vp-c-text-1);
 }
 
+/* --- h2: Concept Heading (major section) --- */
 .vp-doc h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-top: 2.5rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  margin-top: 3.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
   border-bottom: 1px solid var(--vp-c-divider);
+  border-left: 3px solid var(--vp-c-brand-1);
+  color: var(--vp-c-text-1);
 }
 
-.vp-doc h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+/* First h2 right after h1 or blockquote+hr needs less top margin */
+.vp-doc h1 + p + hr + h2,
+.vp-doc hr + h2 {
   margin-top: 2rem;
 }
 
-.vp-doc p {
-  line-height: 1.75;
-  margin: 1.25rem 0;
-  font-size: 1.05rem;
+/* --- h3: Sub-section --- */
+.vp-doc h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
   letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--vp-c-text-1);
+  opacity: 0.92;
 }
 
+/* --- h4: Sub-sub heading --- */
+.vp-doc h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--vp-c-text-2);
+}
+
+/* --- Body text --- */
+.vp-doc p {
+  line-height: 1.8;
+  margin: 1rem 0;
+  font-size: 1.02rem;
+  letter-spacing: -0.005em;
+  color: var(--vp-c-text-1);
+}
+
+/* Tighter spacing for paragraphs right after headings */
+.vp-doc h2 + p,
+.vp-doc h3 + p {
+  margin-top: 0;
+}
+
+/* --- List items --- */
 .vp-doc li {
   line-height: 1.75;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   margin-top: 0.5rem;
 }
 
-/* --- Blockquote (Educational Callout) --- */
+/* --- Beginner explanation paragraphs (indented p inside li) --- */
+.vp-doc li > p:not(:first-child) {
+  color: var(--vp-c-text-2);
+  font-size: 0.94rem;
+  line-height: 1.75;
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+  padding: 0.65rem 1rem;
+  background: var(--vp-c-bg-soft);
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 6px 6px 0;
+}
+
+.dark .vp-doc li > p:not(:first-child) {
+  background: rgba(124, 92, 252, 0.06);
+}
+
+/* Standalone indented explanation blocks (after list or heading) */
+.vp-doc ul + p,
+.vp-doc ol + p {
+  color: var(--vp-c-text-2);
+  font-size: 0.94rem;
+  line-height: 1.75;
+  padding: 0.65rem 1rem;
+  background: var(--vp-c-bg-soft);
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 6px 6px 0;
+}
+
+.dark .vp-doc ul + p,
+.dark .vp-doc ol + p {
+  background: rgba(124, 92, 252, 0.06);
+}
+
+/* --- Blockquote (Educational Callout / TL;DR) --- */
 .vp-doc blockquote {
   border-left: 3px solid var(--vp-c-brand-1);
   background: var(--vp-c-brand-soft);
-  padding: 1rem 1.25rem;
-  border-radius: 4px 6px 6px 4px;
-  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 4px 8px 8px 4px;
+  margin: 1.5rem 0 2rem 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .vp-doc blockquote p {
-  margin: 0;
+  margin: 0.25rem 0;
   color: var(--vp-c-text-1);
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.65;
+  font-size: 0.98rem;
 }
 
 .vp-doc blockquote p strong {
   color: var(--vp-c-brand-1);
+}
+
+/* TL;DR bold paragraph after h2 */
+.vp-doc h2 + p > strong:first-child {
+  display: inline-block;
+  margin-bottom: 0.15rem;
 }
 
 /* --- Table --- */
@@ -190,11 +278,12 @@ body {
   border-radius: 4px;
 }
 
+/* --- Section Dividers (concept separators) --- */
 .vp-doc hr {
-  margin: 3.5rem 0;
+  margin: 3rem 0 1rem 0;
   border: none;
-  border-top: 1px dashed var(--vp-c-brand-3);
-  opacity: 0.3;
+  border-top: 1px solid var(--vp-c-divider);
+  opacity: 0.5;
 }
 
 /* --- Code blocks --- */
@@ -334,14 +423,66 @@ a, .VPSidebarItem, .VPNavBarMenuLink {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
+/* --- Ordered list numbering for step-by-step --- */
+.vp-doc ol {
+  counter-reset: list-counter;
+  padding-left: 0;
+}
+
+.vp-doc ol > li {
+  counter-increment: list-counter;
+  padding-left: 0.5rem;
+}
+
+.vp-doc ol > li::marker {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+}
+
+/* --- Unordered list bullet styling --- */
+.vp-doc ul > li::marker {
+  color: var(--vp-c-text-3);
+}
+
+/* Nested list tighter spacing */
+.vp-doc li > ul,
+.vp-doc li > ol {
+  margin-top: 0.25rem;
+}
+
+/* --- Better spacing between concept sections --- */
+.vp-doc h2 + blockquote {
+  margin-top: 0;
+}
+
+/* --- Connection/link sections at bottom of concepts --- */
+.vp-doc h3 + ul {
+  margin-top: 0.25rem;
+}
+
 /* --- Mobile optimizations --- */
 @media (max-width: 768px) {
   .vp-doc h1 {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
   }
 
   .vp-doc h2 {
     font-size: 1.3rem;
+    margin-top: 2.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .vp-doc h3 {
+    font-size: 1.05rem;
+    margin-top: 1.75rem;
+  }
+
+  .vp-doc p {
+    font-size: 0.98rem;
+  }
+
+  .vp-doc li {
+    font-size: 0.98rem;
   }
 
   .vp-doc table {
@@ -350,6 +491,10 @@ a, .VPSidebarItem, .VPNavBarMenuLink {
 
   .vp-doc th, .vp-doc td {
     padding: 0.5rem 0.6rem;
+  }
+
+  .vp-doc li > p:not(:first-child) {
+    font-size: 0.92rem;
   }
 }
 
