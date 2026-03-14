@@ -16,32 +16,32 @@ hero:
       link: /graph
 
 features:
-  - icon: 🧬
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/></svg>'
     title: "Tier -1: 순수기초"
     details: "확률·벡터·그래프·DB·ML/NLP — AI의 수학적 토대 10가지"
     link: /foundations/
     linkText: 학습하기
-  - icon: 🔧
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>'
     title: "Tier 0: 응용기초"
     details: "임베딩·RAG·지식그래프·에이전트 — 실무 진입점 10가지"
     link: /applied/
     linkText: 학습하기
-  - icon: 💎
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>'
     title: "Tier 1: 핵심"
     details: "GraphRAG·온톨로지·메타엣지·AIP·위상학적 지능 — 패러다임 전환"
     link: /core/
     linkText: 학습하기
-  - icon: 🏗️
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
     title: "Tier 2: 프레임워크"
     details: "분석공간·ReBAC·메타온톨로지·벡터풍부화 — 설계 원칙"
     link: /framework/
     linkText: 학습하기
-  - icon: 🚀
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>'
     title: "Tier 3: 구현"
     details: "NOMIK·FDE·레버·물리엔진·Active Metadata — 실전 배포"
     link: /implementation/
     linkText: 학습하기
-  - icon: 📝
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>'
     title: "글쓰기 × 온톨로지"
     details: "7+1개 분석공간으로 정량화하는 글쓰기 메타온톨로지"
     link: /writing/

@@ -23,10 +23,10 @@ NOMIK: **6개의 정확한 관계 노드만 전달**
 
 ```mermaid
 graph LR
-    CODE["코드베이스"] -->|SCAN| KG["Knowledge Graph<br/>17 노드 × 23 엣지"]
-    KG -->|STORE| NEO["Neo4j"]
-    NEO -->|QUERY| MCP["MCP 서버<br/>21 도구 + 9 리소스"]
-    MCP -->|실시간| AI["AI Agent"]
+    CODE["&nbsp;&nbsp;코드베이스&nbsp;&nbsp;"] -->|"&nbsp;&nbsp;SCAN&nbsp;&nbsp;"| KG["&nbsp;&nbsp;Knowledge Graph<br/>17 노드 × 23 엣지<br/>&nbsp;&nbsp;&nbsp;"]
+    KG -->|"&nbsp;&nbsp;STORE&nbsp;&nbsp;"| NEO["&nbsp;&nbsp;Neo4j&nbsp;&nbsp;"]
+    NEO -->|"&nbsp;&nbsp;QUERY&nbsp;&nbsp;"| MCP["&nbsp;&nbsp;MCP 서버<br/>21 도구 + 9 리소스<br/>&nbsp;&nbsp;&nbsp;"]
+    MCP -->|"&nbsp;&nbsp;실시간&nbsp;&nbsp;"| AI["&nbsp;&nbsp;AI Agent&nbsp;&nbsp;"]
 
     style CODE fill:#1a1a1a,stroke:#a0a0a0,color:#a0a0a0
     style KG fill:#3b1f5e,stroke:#a78bfa,color:#a78bfa
@@ -87,13 +87,13 @@ graph LR
 
 ```mermaid
 graph TB
-    L3["수준 3: 메타-메타레버<br/>정책이 정책을 관리"] --> L2["수준 2: 메타레버<br/>파이프라인을 관리"]
-    L2 --> L1["수준 1: 레버<br/>데이터/콘텐츠를 처리"]
+    L3["&nbsp;&nbsp;수준 3: 메타-메타레버<br/>정책이 정책을 관리<br/>&nbsp;&nbsp;&nbsp;"] --> L2["&nbsp;&nbsp;수준 2: 메타레버<br/>파이프라인을 관리<br/>&nbsp;&nbsp;&nbsp;"]
+    L2 --> L1["&nbsp;&nbsp;수준 1: 레버<br/>데이터/콘텐츠를 처리<br/>&nbsp;&nbsp;&nbsp;"]
 
-    HUB["Apollo Hub<br/>오케스트레이터"] --> |"Constraint 평가"| PLAN["Plan 자동 생성"]
-    PLAN --> |"배포"| SPOKE1["Spoke A"]
-    PLAN --> |"배포"| SPOKE2["Spoke B"]
-    PLAN --> |"배포"| SPOKE3["Spoke C"]
+    HUB["&nbsp;&nbsp;Apollo Hub<br/>오케스트레이터<br/>&nbsp;&nbsp;&nbsp;"] --> |"&nbsp;&nbsp;Constraint 평가&nbsp;&nbsp;"| PLAN["&nbsp;&nbsp;Plan 자동 생성&nbsp;&nbsp;"]
+    PLAN --> |"&nbsp;&nbsp;배포&nbsp;&nbsp;"| SPOKE1["&nbsp;&nbsp;Spoke A&nbsp;&nbsp;"]
+    PLAN --> |"&nbsp;&nbsp;배포&nbsp;&nbsp;"| SPOKE2["&nbsp;&nbsp;Spoke B&nbsp;&nbsp;"]
+    PLAN --> |"&nbsp;&nbsp;배포&nbsp;&nbsp;"| SPOKE3["&nbsp;&nbsp;Spoke C&nbsp;&nbsp;"]
 
     style L3 fill:#4a1717,stroke:#f87171,color:#f87171
     style L2 fill:#4a2c17,stroke:#fbbf24,color:#fbbf24

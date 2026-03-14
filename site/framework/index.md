@@ -55,11 +55,11 @@
 
 ```mermaid
 graph LR
-    subgraph ReBAC["ReBAC: 관계 기반 접근제어"]
-        USER["User"] -->|member| TEAM["Team"]
-        TEAM -->|owner| FOLDER["Folder"]
-        FOLDER -->|parent| DOC["Document"]
-        USER -.->|"can_view = member→owner→parent"| DOC
+    subgraph ReBAC["&nbsp;&nbsp;ReBAC: 관계 기반 접근제어&nbsp;&nbsp;"]
+        USER["&nbsp;&nbsp;User&nbsp;&nbsp;"] -->|"&nbsp;&nbsp;member&nbsp;&nbsp;"| TEAM["&nbsp;&nbsp;Team&nbsp;&nbsp;"]
+        TEAM -->|"&nbsp;&nbsp;owner&nbsp;&nbsp;"| FOLDER["&nbsp;&nbsp;Folder&nbsp;&nbsp;"]
+        FOLDER -->|"&nbsp;&nbsp;parent&nbsp;&nbsp;"| DOC["&nbsp;&nbsp;Document&nbsp;&nbsp;"]
+        USER -.->|"&nbsp;&nbsp;can_view =&nbsp;&nbsp;<br/>&nbsp;&nbsp;member→owner→parent&nbsp;&nbsp;"| DOC
     end
 
     style USER fill:#1e3a5f,stroke:#60a5fa,color:#60a5fa

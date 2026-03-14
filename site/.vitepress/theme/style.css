@@ -113,12 +113,12 @@ body {
 
 /* --- Blockquote (Educational Callout) --- */
 .vp-doc blockquote {
-  border-left: 4px solid var(--vp-c-brand-1);
+  border-left: 3px solid var(--vp-c-brand-1);
   background: var(--vp-c-brand-soft);
-  padding: 1.25rem 1.5rem;
-  border-radius: 4px 12px 12px 4px;
+  padding: 1rem 1.25rem;
+  border-radius: 4px 6px 6px 4px;
   margin: 2rem 0;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .vp-doc blockquote p {
@@ -136,17 +136,20 @@ body {
 .vp-doc table {
   border-collapse: separate;
   border-spacing: 0;
+  display: table;
   width: 100%;
+  table-layout: fixed;
+  word-break: break-word;
   margin: 2rem 0;
   background: var(--vp-c-bg-soft);
-  border-radius: 12px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   border: 1px solid var(--vp-c-border);
 }
 
 .dark .vp-doc table {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 .vp-doc th {
@@ -182,7 +185,7 @@ body {
 .vp-doc strong, .vp-doc b {
   color: var(--vp-c-text-1);
   font-weight: 700;
-  background: linear-gradient(120deg, rgba(124, 92, 252, 0.15) 0%, rgba(124, 92, 252, 0) 100%);
+  background: rgba(124, 92, 252, 0.1);
   padding: 0 0.2rem;
   border-radius: 4px;
 }
@@ -296,10 +299,7 @@ body {
 }
 
 .VPHero .name {
-  background: linear-gradient(135deg, #7c5cfc 0%, #34d399 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--vp-c-text-1);
 }
 
 .VPHero .tagline {
@@ -320,7 +320,7 @@ body {
 /* --- Feature cards --- */
 .VPFeatures .VPFeature {
   border: 1px solid var(--vp-c-border);
-  border-radius: 12px;
+  border-radius: 6px;
   transition: border-color 0.25s, box-shadow 0.25s;
 }
 
@@ -357,15 +357,53 @@ a, .VPSidebarItem, .VPNavBarMenuLink {
   margin: 1.5rem 0;
   padding-bottom: 1rem;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
 }
 
 .mermaid svg {
   display: block;
   margin: 0 auto;
   padding-bottom: 0.5rem;
+  overflow: visible !important;
+  background: transparent !important;
 }
 
+/* Fix Mermaid text cutoff by resetting line-height preventing global .vp-doc inflation */
+.mermaid .label,
+.mermaid .nodeLabel,
+.mermaid foreignObject div {
+  line-height: 1.35 !important;
+}
+
+.mermaid foreignObject {
+  overflow: visible !important;
+}
+
+/* Custom edge label styling: perfectly fit the foreignObject to avoid WebKit clipping */
+.mermaid g.edgeLabel rect {
+  display: none !important;
+}
+.mermaid g.edgeLabel foreignObject span,
+.mermaid g.edgeLabel foreignObject p {
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.mermaid g.edgeLabel foreignObject div {
+  background-color: var(--vp-c-bg-mute) !important;
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  border-radius: 4px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--vp-c-border) !important;
+  color: var(--vp-c-text-1) !important;
+  font-size: 0.9em !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 /* --- Custom Wide Page Layout for Visualizations --- */
 @media (min-width: 960px) {
   .custom-wide-page .VPDoc:not(.has-aside) .container {

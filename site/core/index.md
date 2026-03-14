@@ -18,14 +18,14 @@
 
 ```mermaid
 graph TD
-    S1["1. 텍스트 청킹<br/>600토큰, 100 오버랩"] --> S2["2. 엔티티·관계 추출<br/>LLM + Self-Reflection"]
-    S2 --> S3["3. 그래프 구축<br/>중복 제거, 엣지 가중치"]
-    S3 --> S4["4. 커뮤니티 탐지<br/>Leiden 알고리즘<br/>C0(루트)~C3(리프)"]
-    S4 --> S5["5. 커뮤니티 요약<br/>허브 노드 우선<br/>LLM 보고서 생성"]
-    S5 --> S6["6. 쿼리 처리"]
+    S1["&nbsp;&nbsp;1. 텍스트 청킹<br/>600토큰, 100 오버랩<br/>&nbsp;&nbsp;&nbsp;"] --> S2["&nbsp;&nbsp;2. 엔티티·관계 추출<br/>LLM + Self-Reflection<br/>&nbsp;&nbsp;&nbsp;"]
+    S2 --> S3["&nbsp;&nbsp;3. 그래프 구축<br/>중복 제거, 엣지 가중치<br/>&nbsp;&nbsp;&nbsp;"]
+    S3 --> S4["&nbsp;&nbsp;4. 커뮤니티 탐지<br/>Leiden 알고리즘<br/>C0(루트)~C3(리프)<br/>&nbsp;&nbsp;&nbsp;"]
+    S4 --> S5["&nbsp;&nbsp;5. 커뮤니티 요약<br/>허브 노드 우선<br/>LLM 보고서 생성<br/>&nbsp;&nbsp;&nbsp;"]
+    S5 --> S6["&nbsp;&nbsp;6. 쿼리 처리&nbsp;&nbsp;"]
 
-    S6 --> LOCAL["로컬 검색<br/>hop 기반"]
-    S6 --> GLOBAL["글로벌 검색<br/>맵-리듀스"]
+    S6 --> LOCAL["&nbsp;&nbsp;로컬 검색<br/>hop 기반<br/>&nbsp;&nbsp;&nbsp;"]
+    S6 --> GLOBAL["&nbsp;&nbsp;글로벌 검색<br/>맵-리듀스<br/>&nbsp;&nbsp;&nbsp;"]
 
     style S1 fill:#1a1a1a,stroke:#a78bfa,color:#a78bfa
     style S2 fill:#1a1a1a,stroke:#a78bfa,color:#a78bfa

@@ -10,12 +10,12 @@ Capability의 생명주기를 추적하는 레지스트리:
 
 ```mermaid
 graph LR
-    DEV["개발"] --> TEST["테스트"]
-    TEST --> BIND["바인딩"]
-    BIND --> CERT["인증"]
-    CERT --> PROD["프로덕션"]
-    PROD --> OPS["운영"]
-    OPS --> EOL["폐기"]
+    DEV["&nbsp;&nbsp;개발&nbsp;&nbsp;"] --> TEST["&nbsp;&nbsp;테스트&nbsp;&nbsp;"]
+    TEST --> BIND["&nbsp;&nbsp;바인딩&nbsp;&nbsp;"]
+    BIND --> CERT["&nbsp;&nbsp;인증&nbsp;&nbsp;"]
+    CERT --> PROD["&nbsp;&nbsp;프로덕션&nbsp;&nbsp;"]
+    PROD --> OPS["&nbsp;&nbsp;운영&nbsp;&nbsp;"]
+    OPS --> EOL["&nbsp;&nbsp;폐기&nbsp;&nbsp;"]
 
     style DEV fill:#1e3a5f,stroke:#60a5fa,color:#60a5fa
     style TEST fill:#1a3c34,stroke:#34d399,color:#34d399

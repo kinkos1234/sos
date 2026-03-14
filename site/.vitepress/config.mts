@@ -121,7 +121,12 @@ export default withMermaid(
     },
 
     mermaid: {
-      theme: 'dark',
+      themeVariables: {
+        fontFamily: 'Inter, sans-serif'
+      },
+      flowchart: {
+        padding: 20
+      }
     },
   })
 )
