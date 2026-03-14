@@ -23,7 +23,7 @@
 
 <script setup>
 import { ref, onMounted, watch, nextTick } from 'vue'
-import { useRouter } from 'vitepress'
+import { useRouter, withBase } from 'vitepress'
 import conceptData from '../data/concepts.json'
 
 const graphEl = ref(null)
@@ -188,7 +188,7 @@ async function renderGraph() {
     link.attr('stroke-opacity', 0.6).attr('stroke', '#2e2e2e')
   })
   .on('click', (event, d) => {
-    if (d.link) router.go(d.link)
+    if (d.link) router.go(withBase(d.link))
   })
 
   // Tick
