@@ -15,6 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "d3": "^7.9.0",
+    "katex": "^0.16.38",
+    "markdown-it-katex-gpt": "^1.1.1",
+    "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^11.13.0",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17",

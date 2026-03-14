@@ -75,7 +75,7 @@ graph LR
 
 ### Google Zanzibar
 - 모든 접근제어를 **관계 튜플**로 통합
-- 예: `can_view = viewer ∪ editor ∪ owner ∪ parent.can_view`
+- 예: $\text{can\_view} = \text{viewer} \cup \text{editor} \cup \text{owner} \cup \text{parent.can\_view}$
 - 초당 수백만 건 판정, p95 < 10ms
 
 ### 핵심 통찰

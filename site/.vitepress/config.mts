@@ -41,6 +41,7 @@ export default withMermaid(
     ],
 
     markdown: {
+      math: true,
       lineNumbers: true,
       theme: {
         dark: 'vitesse-dark',

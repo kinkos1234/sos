@@ -119,7 +119,7 @@ LLM은 만능이 아니다. 같은 모델이라도 프롬프트를 어떻게 구
 
 Zero-shot(예시 없이 요청)보다 Few-shot(예시 제공)이, Few-shot보다 Chain-of-Thought(단계별 사고 유도)가 복잡한 추론에서 더 좋은 결과를 낸다. 이것은 GraphRAG의 엔티티 추출과 요약 품질에 직결된다.
 
-- Multi-Head Self-Attention: `Attention(Q,K,V) = softmax(QK^T/√d_k)V`
+- Multi-Head Self-Attention: $\text{Attention}(Q,K,V) = \text{softmax}\!\left(\dfrac{QK^T}{\sqrt{d_k}}\right)V$
 - 프롬프트 기법: Zero-shot → Few-shot → CoT → ReAct → 복합도구 사용
 - 환각 감소: RAG 연동, Self-Verification, RLHF
 

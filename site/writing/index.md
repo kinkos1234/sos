@@ -23,7 +23,7 @@
 
 ### SPACE 1: SEMANTIC (의미)
 - concept_clarity, word_precision, metaphor_effectiveness, ambiguity_level, semantic_depth, lexical_variety, jargon_density
-- 핵심 규칙: `concept_clarity(≥80) AND ambiguity_level(≤20) → 의미 전달 성공`
+- 핵심 규칙: $\text{concept\_clarity}(\geq 80) \;\wedge\; \text{ambiguity\_level}(\leq 20) \;\Rightarrow\; \text{의미 전달 성공}$
 
 ### SPACE 2: STRUCTURAL (구조/위계)
 - hierarchy_clarity, flow_smoothness, segment_coherence, information_chunking, section_balance, logical_progression, visual_scannability
@@ -31,7 +31,7 @@
 
 ### SPACE 3: TEMPORAL (시간/리듬)
 - sentence_rhythm, pacing_speed, suspense_curve, revelation_timing, climax_positioning, reading_momentum, time_investment_value
-- `actual_perceived_speed = pacing_speed × (0.3 + 0.7 × sentence_rhythm/100)`
+- $\text{perceived\_speed} = \text{pacing} \times \left(0.3 + 0.7 \times \dfrac{\text{rhythm}}{100}\right)$
 
 ### SPACE 4: CLUSTER (패턴/군집)
 - theme_consistency, example_diversity, pattern_recognition, categorization_clarity, repetition_effectiveness, grouping_density
