@@ -24,7 +24,7 @@
         :style="{ '--step-color': getTierColor(step.tier) }"
       >
         <div class="step-connector" v-if="i > 0"></div>
-        <a :href="withBase(step.link)" class="step-node">
+        <a href="#" class="step-node" @click.prevent="navigateTo(step.link)">
           <div class="step-number">{{ i + 1 }}</div>
           <div class="step-content">
             <div class="step-header">
@@ -42,9 +42,10 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { withBase } from 'vitepress'
+import { useRouter, withBase } from 'vitepress'
 import pathData from '../data/learning-paths.json'
 
+const router = useRouter()
 const roles = pathData.roles
 const activeRole = ref('beginner')
 
@@ -76,6 +77,18 @@ function getTierColor(tier) {
 
 function getTierLabel(tier) {
   return tierLabels[String(tier)] || ''
+}
+
+async function navigateTo(link) {
+  const hash = link.split('#')[1]
+  await router.go(withBase(link))
+  if (hash) {
+    setTimeout(() => {
+      const nfd = hash.normalize('NFD')
+      const el = document.getElementById(hash) || document.getElementById(nfd)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }, 500)
+  }
 }
 </script>
 
