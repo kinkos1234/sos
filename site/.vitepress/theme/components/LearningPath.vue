@@ -24,7 +24,7 @@
         :style="{ '--step-color': getTierColor(step.tier) }"
       >
         <div class="step-connector" v-if="i > 0"></div>
-        <a :href="step.link" class="step-node">
+        <a :href="withBase(step.link)" class="step-node">
           <div class="step-number">{{ i + 1 }}</div>
           <div class="step-content">
             <div class="step-header">
@@ -42,6 +42,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { withBase } from 'vitepress'
 import pathData from '../data/learning-paths.json'
 
 const roles = pathData.roles
