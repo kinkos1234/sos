@@ -38,6 +38,8 @@ export default withMermaid(
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:title', content: 'Ontology Native System Guide' }],
       ['meta', { property: 'og:description', content: '온톨로지 네이티브 시스템 종합 가이드' }],
+      ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-31Q253MJ2M' }],
+      ['script', {}, `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-31Q253MJ2M');`],
     ],
 
     markdown: {
